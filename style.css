@@ -1,0 +1,84 @@
+/* General */
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Comic Sans MS', cursive,sans-serif;}
+body {background: linear-gradient(120deg, #fefcea, #f1da36, #ff7eb9); color:#333; overflow-x:hidden;}
+
+/* Header */
+header {background-color:#ff9f1c; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center;}
+header h1 {color:#fff; font-size:2rem;}
+nav ul {list-style:none; display:flex; gap:1.5rem;}
+nav a {color:#fff; text-decoration:none; font-weight:bold;}
+
+/* Hero */
+.hero {text-align:center; padding:4rem 2rem; position:relative; overflow:hidden;}
+.hero h2, .hero p {color:#fff; margin-bottom:1rem;}
+.rainbow-btn {
+    padding:1rem 2rem; font-size:1.2rem; border:none; border-radius:10px; cursor:pointer;
+    background: linear-gradient(45deg, #ff6b6b, #ffdd59, #1dd1a1, #5f27cd);
+    background-size:300% 300%; color:#fff; animation: rainbowBG 6s linear infinite;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.rainbow-btn:hover {transform: scale(1.1); box-shadow:0 0 20px rgba(255,255,255,0.6);}
+
+.phone-group{
+    display:flex;
+    gap:10px;
+}
+
+.phone-group input:first-child{
+    width:90px;
+}
+
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    font-size:28px;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+
+@keyframes rainbowBG {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+/* Puppy Gallery */
+.puppy-gallery {padding:4rem 2rem; text-align:center;}
+.puppy-cards {display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; margin-top:2rem;}
+.puppy-card {background:#fff; border-radius:15px; padding:1rem; width:200px; cursor:pointer;
+    transition: transform 0.5s, box-shadow 0.5s;}
+.puppy-card:hover {transform: translateY(-15px) scale(1.05); box-shadow:0 15px 25px rgba(0,0,0,0.3);}
+.puppy-card img {width:100%; border-radius:10px;}
+
+/* About & Contact */
+.about, .contact {padding:4rem 2rem; background-color:rgba(255,255,255,0.7); text-align:center; border-radius:15px; margin:2rem;}
+.contact form {display:flex; flex-direction:column; gap:1rem; max-width:400px; margin:auto;}
+.contact input, .contact textarea {padding:0.8rem; border-radius:10px; border:1px solid #ccc; font-size:1rem;}
+
+/* Popup */
+.popup {position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.8);
+    display:none; justify-content:center; align-items:center; flex-direction:column; color:#fff; padding:2rem; z-index:1000; animation: fadeIn 0.5s;}
+.popup img {width:300px; border-radius:15px; margin-bottom:1rem;}
+#closePopup {position:absolute; top:20px; right:40px; font-size:2rem; cursor:pointer;}
+
+@keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+
+/* Fade-in sections on scroll */
+.fade-in-section {opacity:0; transform: translateY(20px); transition: all 1s ease-out;}
+.fade-in-section.visible {opacity:1; transform: translateY(0);}
+
+/* Footer */
+footer {background-color:#ff9f1c; color:#fff; text-align:center; padding:1rem;}
+

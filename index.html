@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Paradise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Puppy Paradise</h1>
+            <ul>
+                <li><a href="#puppies">Puppies</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2 class="fade-in">Find Your Furry Friend Today!</h2>
+        <p class="fade-in">Adorable puppies waiting for loving homes 🐶</p>
+        <button id="shopNow" class="rainbow-btn">Shop Now</button>
+
+       </section>
+
+    <section id="puppies" class="puppy-gallery fade-in-section">
+        <h2>Featured Puppies</h2>
+        <div class="puppy-cards">
+            <div class="puppy-card" onclick="showPopup('Bella', 'Golden Retriever', '2 months', 'puppy1.jpg')">
+                <img src="golden.jpeg" alt="Puppy 1">
+                <h3>Bella</h3>
+                <p>Golden Retriever</p>
+            </div>
+            <div class="puppy-card" onclick="showPopup('Max', 'Beagle', '3 months', 'puppy2.jpg')">
+                <img src="beagle.jpeg" alt="Puppy 2">
+                <h3>Max</h3>
+                <p>Beagle</p>
+            </div>
+            <div class="puppy-card" onclick="showPopup('Luna', 'Pomeranian', '4 months', 'puppy3.jpg')">
+                <img src="pom.jpeg" alt="Puppy 3">
+                <h3>Luna</h3>
+                <p>Pomeranian</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about fade-in-section">
+        <h2>About Puppy Paradise</h2>
+        <p>We connect loving families with adorable puppies. All our puppies are vaccinated, healthy, and full of love!</p>
+    </section>
+
+  <section id="contact" class="contact fade-in-section">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+
+        <div class="phone-group">
+            <input type="text" id="countryCode" placeholder="+237" required>
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+        </div>
+
+        <button type="submit" class="rainbow-btn">
+            Contact on WhatsApp
+        </button>
+    </form>
+
+</section>
+  
+
+    <div id="popup" class="popup">
+        <span id="closePopup">&times;</span>
+        <img id="popupImg" src="" alt="">
+        <h3 id="popupName"></h3>
+        <p id="popupBreed"></p>
+        <p id="popupAge"></p>
+    </div>
+
+    <footer>
+        <p>© 2026 Puppy Paradise. All rights reserved 🐾</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  <a href="https://wa.me/237651639725" class="whatsapp-float" target="_blank">
+💬
+</a>
+</body>
+</html>
